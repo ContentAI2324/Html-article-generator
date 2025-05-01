@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple AI Article Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { padding: 10px; margin-top: 10px; }
+    .article { margin-top: 20px; padding: 15px; background: #f4f4f4; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Simple AI Article Generator</h1>
+  <input type="text" id="topic" placeholder="Enter a topic..." size="40" />
+  <button onclick="generateArticle()">Generate Article</button>
+  <div class="article" id="output"></div>
+
+  <script>
+    function generateArticle() {
+      const topic = document.getElementById('topic').value;
+      if (!topic) {
+        alert("Please enter a topic.");
+        return;
+      }
+      const output = document.getElementById('output');
+      output.innerHTML = `<h2>${topic}</h2><p>This is a sample AI-generated article about <strong>${topic}</strong>. You can expand this using actual AI APIs like OpenAI.</p>`;
+    }
+  </script>
+</body>
+</html>
